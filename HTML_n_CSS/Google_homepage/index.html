@@ -5,28 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IBK's Google Home Page</title>
     <link rel="stylesheet" href="style.css"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!-- header, main, adn footer are single use tags -->
     <header>
         <div class="nav-container">
             <!-- "a" is anchor tag -->
-            <a>
+            <a  class="text-link">
                 <p>About</p>
             </a>
-            <a>
+            <a  class="text-link">
                 <p>Store</p>
             </a>
         </div>
-        
-        <nav>
-            <a>
+
+        <nav class="nav-container">
+            <a  class="text-link">
                 <p>Gmail</p>
             </a>
-            <a>
+            <a  class="text-link">
                 <p>Images</p>
             </a>
-            <a>ICON</a>
+
+            
+            <a>
+                <i class="fa-solid fa-image"></i>
+            </a>
             <a>ICON</a>
             <a>IMG</a>
         </nav>
@@ -41,6 +55,20 @@
     <footer>
 
     </footer>
+
+    <script>
+        // Define the shared URL
+        const sharedUrl = "https://www.youtube.com/watch?v=Eb3lOiukwAQ&t=13652s";
+
+        // Get all anchors with the class 'text-link'
+        const anchors = document.querySelectorAll(".text-link");
+
+        // Loop through and assign the URL to each anchor
+        anchors.forEach(anchor => {
+            anchor.href = sharedUrl;
+            anchor.target = "_blank";// Ensures the link opens in a new tab
+        });
+    </script>
     
 </body>
 </html>
