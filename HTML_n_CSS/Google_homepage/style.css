@@ -1,0 +1,22 @@
+/* '*' selects everything in the document */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #032036;
+}
+
+
+/* flex display default is horizontal */
+header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
