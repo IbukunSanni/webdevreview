@@ -74,7 +74,7 @@
             </button>
         </div>
         <p class="language-text">
-            Google offered in: <a class="language-link">Maori</a>
+            Google offered in: <a class="language-link">Yoruba</a>
         </p>
 
     </main>
@@ -124,6 +124,12 @@
             anchor.href = sharedUrl;
             anchor.target = "_blank";// Ensures the link opens in a new tab
         });
+
+        const link = document.querySelector(".text-link, .icon-link");
+        link.addEventListener('click', function (event) {
+        event.preventDefault(); // Prevents the default link behavior
+        // link.textContent = 'Link clicked!';
+  });
     </script>
     
 </body>

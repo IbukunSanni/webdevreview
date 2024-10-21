@@ -41,6 +41,14 @@ footer a:hover {
     text-decoration: underline;
 }
 
+.text-link:visited{
+    color: purple;
+}
+
+.text-link:active{
+    color: peru;
+}
+
 .img-button {
     border: none;
     background: transparent;
