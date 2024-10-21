@@ -1,33 +1,48 @@
-/* Order of overriding '*' -> tag -> class -> id  */
-/* '*' selects everything in the document */
 * {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-    font-family: 'inter', sans-serif;
-    color: #032036;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    color: #0f172a;
+}
+
+body {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* THESE ARE ADDED POST COURSE! */
+main,
+header,
+footer > div {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* JUST THESE LINES ABOVE */
+
+button {
+    cursor: pointer;
 }
 
 .google-header {
     font-family: 'Poppins', sans-serif;
 }
 
-
-/* flex display default is horizontal */
-/* use paddings over margins*/
 header {
     display: flex;
-    justify-content : space-between;
-    gap: 1rem;
     align-items: center;
+    justify-content: space-between;
     padding: 1rem;
+    gap: 1rem;
 }
 
-/* "." used to specify a class */
 .nav-container {
     display: flex;
-    gap: 1rem;
     align-items: center;
+    gap: 1rem;
 }
 
 .text-link,
@@ -41,25 +56,8 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.text-link:visited{
-    color: purple;
-}
-
-.text-link:active{
-    color: peru;
-}
-
-.img-button {
-    border: none;
-    background: transparent;
-}
-
-/* combination selector class and tag */
-.img-button img {
-    width: 30px;
-    aspect-ratio: 1 / 1;
-    overflow: hidden;
-    border-radius: 50%;
+.nav-container-second .text-link {
+    display: none;
 }
 
 .icon-link {
@@ -77,8 +75,16 @@ footer a:hover {
     background: rgb(235, 235, 235);
 }
 
-.nav-container-second .text-link {
-    display: none;
+.img-button {
+    border: none;
+    background: transparent;
+}
+
+.img-button img {
+    width: 30px;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 100%;
 }
 
 main {
@@ -88,7 +94,7 @@ main {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 5rem 1rem;
+    padding: 4rem 1rem;
 }
 
 .title-text {
@@ -131,7 +137,6 @@ main {
 
 .input-icon:hover {
     opacity: 0.6;
-    cursor: pointer;
 }
 
 .button-grid {
@@ -142,14 +147,14 @@ main {
 
 .button-grid button {
     padding: 0.5rem 1rem;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
+    /* hello my name is james */
     background: rgb(247, 247, 247);
     border-radius: 0.25rem;
-    cursor: pointer;
 }
 
 .button-grid button:hover {
-    border: 2px solid slategray;
+    border: 1px solid slategray;
 }
 
 .language-text {
@@ -171,7 +176,7 @@ footer {
     font-size: 0.7rem;
 }
 
-footer>div{
+footer>div {
     padding: 1rem;
 }
 
@@ -189,6 +194,18 @@ footer>div{
     gap: 1rem;
 }
 
-.search-cross{
-    cursor: crosshair;
+@media (min-width: 640px) {
+    footer {
+        font-size: 0.8rem;
+    }
+
+    .footer-grid {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .nav-container-second .text-link {
+        display: block;
+    }
 }
