@@ -37,10 +37,10 @@
                 <p>Images</p>
             </a>
 
-            <a>
+            <a class="icon-link" >
                 <i class="fa-solid fa-image"></i>
             </a>
-            <a class="icon-link" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <a class="icon-link" >
                 <i class="fa-solid fa-braille"></i>
             </a>
             <button class="img-button">
@@ -49,21 +49,75 @@
         </nav>
         
     </header>
-
+    
     <main>
+        <h1 class="title-text">Google</h1>
+        <div class="input-bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="search-cross" title="search"/>
+            <div>
+                <button class="input-icon">
+                    <i class="fa-solid fa-microphone "></i>
+                </button>
+                <button class="input-icon">
+                    <i class="fa-solid fa-camera "></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="button-grid">
+            <button>
+                <p>Google Search</p>
+            </button>
+            <button>
+                <p>I'm Feeling Lucky</p>
+            </button>
+        </div>
+        <p class="language-text">
+            Google offered in: <a class="language-link">Maori</a>
+        </p>
 
     </main>
 
     <footer>
+        <div>
+            <p>Canada</p>
+        </div>
+        <hr />
+        <div class="footer-grid">
+            <div class="footer-links">
+                <a href="/">
+                    <p>Advertising</p>
+                </a>
+                <a href="/">
+                    <p>Business</p>
+                </a>
+                <a href="/">
+                    <p>How Search Works</p>
+                </a>
+            </div>
+
+            <div class="footer-links">
+                <a href="/">
+                    <p>Privacy</p>
+                </a>
+                <a href="/">
+                    <p>Terms</p>
+                </a>
+                <a href="/">
+                    <p>Settings</p>
+                </a>
+            </div>
+        </div>
 
     </footer>
 
     <script>
-        // Define the shared URL
-        const sharedUrl = "https://www.youtube.com/watch?v=Eb3lOiukwAQ&t=13652s";
+        // Define the shared URL, it is a surprise
+        const sharedUrl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
 
         // Get all anchors with the class 'text-link'
-        const anchors = document.querySelectorAll(".text-link");
+        const anchors = document.querySelectorAll(".text-link, .icon-link");
 
         // Loop through and assign the URL to each anchor
         anchors.forEach(anchor => {
