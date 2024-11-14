@@ -143,6 +143,8 @@ main {
 
 .whoami-contents p{
     font-size: 1.1rem;
+    text-align: justify;
+
 
 }
 
@@ -176,6 +178,11 @@ section h2 {
 
 }
 
+.experience-details,
+.project-details{
+    margin-bottom: 10px;
+}
+
 .experience-card {
     gap: 0.5rem 1rem;
 }
@@ -187,6 +194,11 @@ section h2 {
 .experience-card p {
     font-size: 0.9rem;
 }
+
+.experience-card li,
+.project-card li {
+    margin-bottom: 10px;
+} 
 
 .experience-card,
 .project-card {
@@ -242,6 +254,7 @@ section h2 {
 .card-header {
     font-weight: 400;
     font-size: 1rem;
+    color: var(--color-highlight);
 }
 
 .card-header-link {
@@ -318,7 +331,7 @@ section h2 {
     top:0;
     /* width: 100%;
     left:0; */
-    padding: 1rem 0; /*pading: <top and bottom> <left and right>*/
+    padding: 1rem 0; /*padding: <top and bottom> <left and right>*/
 }
 
 .sticky-header h2 {
@@ -428,7 +441,7 @@ footer p {
     }
 
     .sticky-header {
-        display: none;
+        /* display: none; */
     }
 
     header {
