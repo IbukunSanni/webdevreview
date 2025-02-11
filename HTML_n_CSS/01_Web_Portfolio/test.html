@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mouse Follower</title>
+  <style>
+    /* Step 2: Style the Follower */
+    #follower {
+      position: absolute;
+      width: 300px; /* Make the element bigger */
+      height: 300px;
+      background-color: #3498db;
+      border-radius: 50%;
+      pointer-events: none; /* Prevents interfering with clicks */
+      transform: translate(-50%, -50%);
+      opacity: 0.3; /* Start with 60% opacity */
+      transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+      z-index: -1; /* Move it to the background */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Follower Element -->
+  <div id="follower"></div>
+
+  <!-- Step 3: JavaScript for Tracking Mouse Movement and Scaling Effect -->
+  <script>
+    // Select the follower element
+    const follower = document.getElementById('follower');
+
+    // Function to update the position of the follower
+    document.addEventListener('mousemove', (event) => {
+      follower.style.left = event.pageX + 'px';
+      follower.style.top = event.pageY + 'px';
+
+      // Increase the size and decrease opacity
+      follower.style.transform = 'translate(-50%, -50%) scale(1.5)'; // Scale up the element
+      follower.style.opacity = '0.4'; // Reduce opacity to 40%
+    });
+
+    // Reset the element size and opacity when the mouse stops moving
+    document.addEventListener('mouseleave', () => {
+      follower.style.transform = 'translate(-50%, -50%) scale(1)';
+      follower.style.opacity = '0.6';
+    });
+  </script>
+</body>
+</html>
